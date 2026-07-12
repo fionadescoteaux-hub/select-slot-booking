@@ -38,8 +38,9 @@
   }
   button.refresh:hover { background: #5B2245; border-color: #5B2245; }
   .refreshhint { font-weight: bold; color: #5B2245; font-size: 14px; }
-  .days { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  @media (max-width: 680px) { .days { grid-template-columns: 1fr; } }
+  .days { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  @media (max-width: 900px) { .days { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .days { grid-template-columns: 1fr; } }
   .day { border: 1px solid #DDCCD5; border-radius: 8px; overflow: hidden; }
   .day h2 { background: #5B2245; color: #fff; margin: 0; padding: 11px 14px; font-size: 16px; font-weight: normal; }
   .slot {
@@ -95,14 +96,14 @@
 (function () {
   var API = "/.netlify/functions/bookings";
   var DAYS = [
-    { id: "2026-06-12", label: "Friday 12 June" },
-    { id: "2026-06-15", label: "Monday 15 June" },
-    { id: "2026-06-16", label: "Tuesday 16 June" }
+    { id: "2026-07-21", label: "Tuesday 21 July" },
+    { id: "2026-07-22", label: "Wednesday 22 July" },
+    { id: "2026-07-23", label: "Thursday 23 July" },
+    { id: "2026-07-24", label: "Friday 24 July" }
   ];
   var TIMES = [
-    { id: "09", label: "9:00 – 10:00" }, { id: "10", label: "10:00 – 11:00" },
-    { id: "11", label: "11:00 – 12:00" }, { id: "12", label: "12:00 – 13:00" },
-    { id: "13", label: "13:00 – 14:00" }, { id: "14", label: "14:00 – 15:00" }
+    { id: "am", label: "9:30 – 11:15" },
+    { id: "pm", label: "11:30 – 1:15" }
   ];
   var myBooking = null;
 
