@@ -2,17 +2,14 @@ import { getStore } from "@netlify/blobs";
 import nodemailer from "nodemailer";
 
 const DAY_LABELS = {
-  "2026-06-12": "Friday 12 June",
-  "2026-06-15": "Monday 15 June",
-  "2026-06-16": "Tuesday 16 June"
+  "2026-07-21": "Tuesday 21 July",
+  "2026-07-22": "Wednesday 22 July",
+  "2026-07-23": "Thursday 23 July",
+  "2026-07-24": "Friday 24 July"
 };
 const TIME_LABELS = {
-  "09": "9:00 – 10:00",
-  "10": "10:00 – 11:00",
-  "11": "11:00 – 12:00",
-  "12": "12:00 – 13:00",
-  "13": "13:00 – 14:00",
-  "14": "14:00 – 15:00"
+  "am": "9:30 – 11:15",
+  "pm": "11:30 – 1:15"
 };
 
 function slotLabel(slot) {
